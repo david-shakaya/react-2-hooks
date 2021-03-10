@@ -2,9 +2,17 @@ import React from "react";
 import style from "./Counter.module.css";
 
 class Counter extends React.Component {
+  // Есл в пропсе ничего не передано используем это
+  static defaultProps = {
+    initialValue: 0,
+  };
+
+  // static propTyps = {
+
+  // }сюда напишем тип пропсов
+
   state = {
-    value: 1,
-    defaultValue: 0,
+    value: this.props.initialValue,
   };
 
   handleIncrement = () => {

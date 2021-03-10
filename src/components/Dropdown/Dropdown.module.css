@@ -1,0 +1,24 @@
+.Dropdown__wrapper {
+  position: relative;
+  width: 400px;
+  /* height: 100px; */
+  height: 100px;
+  box-sizing: border-box;
+  background-color: cyan;
+  border: 1px black solid;
+  padding: 20px;
+}
+
+.Dropdown__btn {
+  padding: 2px;
+}
+
+.Dropdown {
+  width: 400px;
+  box-sizing: border-box;
+  background-color: burlywood;
+  height: 65px;
+  position: absolute;
+  top: 101%;
+  left: 0;
+}
