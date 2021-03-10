@@ -1,0 +1,16 @@
+.Counter__wrapper {
+  width: 400px;
+  border: 1px black solid;
+  padding: 40px;
+}
+.Span {
+  display: block;
+  text-align: center;
+  font-size: 32px;
+}
+
+.Counter__controls {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
