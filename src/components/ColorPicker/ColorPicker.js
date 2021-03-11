@@ -35,7 +35,6 @@ class ColorPicker extends React.Component {
         <p>
           Выбран цвет:
           <span className={style.color__text__span}>
-            {" "}
             {arrPropsOptions[activeIndex].label}
           </span>
         </p>
