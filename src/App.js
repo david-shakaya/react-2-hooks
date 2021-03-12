@@ -5,6 +5,7 @@ import ColorPicker from "./components/ColorPicker";
 import Todos from "./components/Todos";
 import colorPickerData from "./data/colorPickerData.json";
 import todosData from "./data/todosData.json";
+import Form from "./components/Form/Form";
 
 class App extends React.Component {
   state = {
@@ -12,6 +13,10 @@ class App extends React.Component {
     caunterValue: 12,
     colorPickerActiveIdx: 1,
     todos: todosData,
+  };
+
+  handleFormSubmit = (dataForm) => {
+    console.log(dataForm);
   };
 
   deleteTodo = (idTodo) => {
@@ -55,6 +60,8 @@ class App extends React.Component {
 
     return (
       <>
+        <Form onSubmit={this.handleFormSubmit} />
+
         <Counter
           caunterValue={caunterValue}
           handleIncrement={this.handleIncrement}
