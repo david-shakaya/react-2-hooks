@@ -1,9 +1,11 @@
 import React from "react";
+import RadioBtn from "./RadioBtn/RadioBtn";
 
 class Form extends React.Component {
   state = {
     name: "",
     lastName: "",
+    experience: "junior",
   };
 
   handleInputChenge = (e) => {
@@ -16,6 +18,17 @@ class Form extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.onSubmit(this.state);
+
+    this.resetForm();
+  };
+
+  handleChengeRadio = (e) => {
+    this.setState({ experience: e.target.value });
+  };
+
+  // Очищает инпуты удаляя со стейта
+  resetForm = () => {
+    this.setState({ name: "", lastName: "" });
   };
 
   render() {
@@ -40,6 +53,10 @@ class Form extends React.Component {
               onChange={this.handleInputChenge}
             />
           </label>
+          <RadioBtn
+            onSubmit={this.handleChengeRadio}
+            onSubmitState={this.state.experience}
+          />
           <button type="submit">Отправить</button>
         </form>
       </>

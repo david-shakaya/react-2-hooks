@@ -60,7 +60,8 @@ class App extends React.Component {
 
     return (
       <>
-        <Form onSubmit={this.handleFormSubmit} />
+        <Form onSubmit={this.handleFormSubmit}></Form>
+        {/* <RadioBtn /> */}
 
         <Counter
           caunterValue={caunterValue}
@@ -72,7 +73,6 @@ class App extends React.Component {
           dropdownIsVisible={dropdownIsVisible}
         />
         <ColorPicker options={colorPickerData} />
-
         <Todos
           todos={todos}
           onDeleteTodo={this.deleteTodo}
