@@ -7,6 +7,11 @@ import colorPickerData from "./data/colorPickerData.json";
 import todosData from "./data/todosData.json";
 import Form from "./components/Form/Form";
 
+// Класный пакет для подставления класов динамически npm install classnames
+// ПРИМЕР
+// import classNames from "classnames";
+// const nameCl = classNames("foo", { bar: false });
+
 class App extends React.Component {
   state = {
     dropdownIsVisible: false,
