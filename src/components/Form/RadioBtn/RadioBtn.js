@@ -1,20 +1,10 @@
 import React from "react";
 
 class RadioBtn extends React.Component {
-  //   state = {
-  //     experience: "junior",
-  //   };
-
-  //   handleChenge = (e) => {
-  //     this.setState({ experience: e.target.value });
-  //   };
-
-  //   this.props.onSubmit
-
   render() {
     return (
       <div>
-        <label htmlFor="">
+        <label>
           junior
           <input
             type="radio"
@@ -24,7 +14,7 @@ class RadioBtn extends React.Component {
             onChange={this.props.onSubmit}
           />
         </label>
-        <label htmlFor="">
+        <label>
           middle
           <input
             type="radio"
@@ -34,7 +24,7 @@ class RadioBtn extends React.Component {
             onChange={this.props.onSubmit}
           />
         </label>
-        <label htmlFor="">
+        <label>
           senior
           <input
             type="radio"

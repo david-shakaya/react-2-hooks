@@ -1,11 +1,13 @@
 import React from "react";
 import RadioBtn from "./RadioBtn/RadioBtn";
+import CheckboxLicence from "./Checkbox/Checkbox";
 
 class Form extends React.Component {
   state = {
     name: "",
     lastName: "",
     experience: "junior",
+    licence: false,
   };
 
   handleInputChenge = (e) => {
@@ -24,6 +26,12 @@ class Form extends React.Component {
 
   handleChengeRadio = (e) => {
     this.setState({ experience: e.target.value });
+  };
+
+  handleChengeCheckbox = (e) => {
+    this.setState({
+      licence: e.target.checked,
+    });
   };
 
   // Очищает инпуты удаляя со стейта
@@ -57,7 +65,10 @@ class Form extends React.Component {
             onSubmit={this.handleChengeRadio}
             onSubmitState={this.state.experience}
           />
-          <button type="submit">Отправить</button>
+          <CheckboxLicence onChecked={this.handleChengeCheckbox} />
+          <button type="submit" disabled={this.state.licence ? false : true}>
+            Отправить
+          </button>
         </form>
       </>
     );
